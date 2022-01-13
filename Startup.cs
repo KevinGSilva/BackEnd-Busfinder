@@ -31,9 +31,9 @@ namespace BusFinder_2
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy", builder => builder
-                    .WithOrigins(" * ")
+                    .AllowAnyOrigin()
                     .AllowAnyMethod()
-                    .SetIsOriginAllowed((host) => true)
+                    //.SetIsOriginAllowed((host) => true)
                     .AllowAnyHeader());
 
             });
